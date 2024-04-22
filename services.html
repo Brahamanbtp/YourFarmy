@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Farmy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #333;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Advanced Styles */
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product-list li {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .feature i {
+      margin-right: 10px;
+      color: #4CAF50;
+    }
+    /* Additional Information */
+    .info {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul li {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    /* Contact Form Styles */
+.contact-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Testimonials Styles */
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.testimonial {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <h1>Your Farmy</h1>
+    <nav>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="store.html">Marketplace</a></li>
+        <li><a href="Resources.html">Resources</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="Loan.html">Financial Services</a></li>
+        <li><a href="Community.html">Community</a></li>
+        <li><a href="Technology.html">Technology</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Welcome to Your Farmy</h2>
+      <p>Your one-stop platform for all farming needs. Connect, Learn, Grow!</p>
+      <div class="feature">
+        <i class="fas fa-users"></i>
+        <div>
+          <p>Join our <a href="#community">Community</a> to network with fellow farmers.</p>
+          <p class="info">New to farming? Check our <a href="#education">Education</a> section for resources and guides.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section id="marketplace">
+      <h2>Marketplace</h2>
+      <div class="product-list">
+        <h3>Featured Products</h3>
+        <ul>
+          <li>Organic Seeds</li>
+          <li>Fertilizers</li>
+          <li>Smart Farming Gadgets</li>
+          <li>Tractors & Equipment</li>
+          <li>AgriTech Solutions</li>
+          <li>Farm Produce</li>
+          <li>Livestock</li>
+          <li>Greenhouses</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shopping-cart"></i>
+        <div>
+          <p>Visit our <a href="store.html">Marketplace</a> for a wide range of farming products.</p>
+          <p class="info">Looking for deals? Don't miss our seasonal discounts!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li>Farming Guides</li>
+        <li>Weather Forecast</li>
+        <li>Crop Rotation & Pest Control</li>
+        <li>Soil Health</li>
+        <li>Water Management</li>
+        <li>Market Analysis</li>
+        <li>Organic Certification</li>
+        <li>Agri-tourism</li>
+      </ul>
+      <div class="feature">
+        <i class="fas fa-book-open"></i>
+        <div>
+          <p>Explore our <a href="#resources">Resources</a> for valuable farming information and tips.</p>
+          <p class="info">Bookmark our guides for easy access anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Webinars & Workshops</li>
+        <li>Video Tutorials</li>
+        <li>Articles & Blogs</li>
+        <li>Online Courses</li>
+        <li>Expert Talks</li>
+        <li>Research Papers</li>
+        <li>Farming Simulations</li>
+        <li>Case Studies</li>
+      </ul>
+      <div class="feature">
+        <i class="fas fa-graduation-cap"></i>
+        <div>
+          <p>Enhance your farming skills with our <a href="#education">Education</a> resources.</p>
+          <p class="info">Join our webinars to learn from industry experts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial Services Section -->
+    <section id="finance">
+      <h2>Financial Services</h2>
+      <ul>
+        <li>Agricultural Loans</li>
+        <li>Crop Insurance</li>
+        <li>Grants & Subsidies</li>
+        <li>Investment Opportunities</li>
+        <li>Tax Benefits</li>
+        <li>Retirement Plans</li>
+        <li>Financial Counseling</li>
+        <li>Asset Management</li>
+      </ul>
+      <div class="feature">
+        <i class="fas fa-money-bill-wave"></i>
+        <div>
+          <p>Explore our <a href="#finance">Financial Services</a> to support your farming projects.</p>
+          <p class="info">Find the best financial solutions tailored for farmers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community">
+      <h2>Community</h2>
+      <ul>
+        <li>Forum & Discussion Boards</li>
+        <li>Networking Events</li>
+        <li>Collaboration Platforms</li>
+        <li>Success Stories</li>
+        <li>Local Farmer Groups</li>
+        <li>Volunteer Programs</li>
+        <li>Community Projects</li>
+        <li>Marketplace Reviews</li>
+      </ul>
+      <div class="feature">
+        <i class="fas fa-users"></i>
+        <div>
+          <p>Join our <a href="#community">Community</a> to connect with fellow farmers.</p>
+          <p class="info">Share experiences, ask questions, and collaborate for mutual growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+      <h2>Technology</h2>
+      <ul>
+        <li>AgriTech Solutions</li>
+        <li>Smart Farming</li>
+        <li>Digital Tools</li>
+        <li>Data Analytics</li>
+        <li>IoT in Agriculture</li>
+        <li>Drone Technology</li>
+        <li>Sustainability Tech</li>
+        <li>Agri-robotics</li>
+      </ul>
+      <div class="feature">
+        <i class="fas fa-laptop"></i>
+        <div>
+          <p>Explore the latest <a href="#technology">Technology</a> trends in agriculture.</p>
+          <p class="info">Learn how technology is revolutionizing modern farming practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials">
+  <h2>What Our Farmers Say</h2>
+  <div class="testimonial-container">
+      <div class="testimonial">
+          <blockquote class="testimonial-text">
+              "Your Farmy has been a game-changer for me. From learning resources to financial support, it's all here!"
+          </blockquote>
+          <cite class="testimonial-author">- John Doe, Organic Farmer</cite>
+      </div>
+      <div class="testimonial">
+          <blockquote class="testimonial-text">
+              "The community at Your Farmy is amazing! Networking with other farmers has been invaluable."
+          </blockquote>
+          <cite class="testimonial-author">- Jane Smith, Livestock Farmer</cite>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Contact Us Section -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Got questions or feedback? We'd love to hear from you!</p>
+  <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+      </div>
+      <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+      <div class="form-group">
+          <label for="message" class="form-label">Message:</label>
+          <textarea id="message" name="message" class="form-textarea" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Farmers' Hub. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/farmershub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com/farmershub" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/farmershub" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/farmershub" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Smooth Scroll Navigation
+    $('nav a').on('click', function(e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lobster&family=Montserrat:wght@1,500;600;700&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Farm Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#featured-products">Featured Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#just-in">Just In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact-us">Contact Us</a>
+      </li>
+    </ul>
+    <form class="form-inline ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!-- Shopping cart modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody">
+            <!-- Cart items will be inserted here -->
+          </tbody>
+        </table>
+        <h4>Total: <span id="cartTotal">Rs.0</span></h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="container">
+ <!-- /main row -->
+  <div class="row carousel-row py-3">
+    <div class="col-md-12">
+      <h2 class="h2-responsive shadow py-3">Featured <b>Products</b></h2>
+       <div id="myCarousel" class="carousel store-carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/cotton.jpg" class="img-responsive img-fluid" alt="">									
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Cotton seeds</h4>									
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>Rs.150/kg</strike> <b>Rs.135/kg</b></p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Cotton seeds', 135)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/forage.jpg" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Forage seeds</h4>									
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>Rs.100/kg</strike> <b>Rs.90/kg</b></p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Forage seeds', 90)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>		
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/soyabean.jpg" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Soyabean seeds</h4>									
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>Rs.120/kg</strike> <b>Rs.105/kg</b></p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Soyabean seeds', 105)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>								
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/sesame.jpg" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Sesame seeds</h4>									
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>Rs.170/kg</strike> <b>Rs.140/kg</b></p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Sesame seeds', 140)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/tomato.jpg" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tomato seeds</h4>
+                    <p class="item-price"><strike>Rs.170/kg</strike> <span>Rs.160/kg</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Tomato seeds', 160)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/cucumber.jpg" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Cucumber seeds</h4>
+                    <p class="item-price"><strike>Rs.250/kg</strike> <span>Rs.150/kg</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                      </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Cucumber seeds', 150)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>		
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="images/pig_PNG2209.png" class="img-responsive img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Pigs</h4>
+                    <p class="item-price"><strike>$369.00</strike> <span>$349.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Pigs', 349)">Add to Cart</a>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /main store row -->
+  <div class="col-md-12 store-items-col">
+    <h2 class="store-items-heading h2-responsive shadow py-2">Just <b>In</b></h2>
+    <!-- wrapper -->
+    <div class="store-items">
+      <div class="row store-row-2 py-3">
+        <div class="col-sm-3">
+          <div class="thumb-wrapper">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="img-box">
+              <img src="images/map.jpg" class="img-responsive img-fluid" alt="">									
+            </div>
+            <div class="thumb-content">
+              <h4 class="h4-responsive">M.A.P fertilizer</h4>									
+              <div class="star-rating">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                  <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                  <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                  <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                  <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                </ul>
+              </div>
+              <p class="item-price"><strike>Rs.85/kg</strike> <b>Rs.75/kg</b></p>
+              <a href="#" class="btn btn-primary" onclick="addToCart('M.A.P fertilizer', 75)">Add to Cart</a>
+            </div>						
+          </div>                      
+        </div>
+        <!-- /card 1 -->
+        <div class="col-sm-3">
+          <div class="thumb-wrapper">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/npk.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">N.P.K fertilizer</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.95/kg</strike> <b>Rs.75/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('N.P.K fertilizer', 75)">Add to Cart</a>
+              </div>						
+            </div>                     
+          </div>
+          <!-- /card 2 -->
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/sulphur.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">Suplur fertilizer</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.75/kg</strike> <b>Rs.70/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Suplur fertilizer', 70)">Add to Cart</a>
+              </div>						
+            </div>              
+          </div>
+          <!-- /card3 -->
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/C..jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">C.M. fertilizer</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.85/kg</strike> <b>Rs.50/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('C.M. fertilizer', 50)">Add to Cart</a>
+              </div>						
+            </div>            
+          </div>
+          <!-- /card 4-->
+        </div>
+        <!-- /store-row-2 -->
+        <!-- Store 3 -->
+        <div class="row store-row-3 py-3">
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/sickle.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">Sickle</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.1700/kg</strike> <b>Rs.1500/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Sickle', 1500)">Add to Cart</a>
+              </div>						
+            </div>                      
+          </div>
+          <!-- /card 1 -->
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/sprayer.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">Sprayer</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.2000/kg</strike> <b>Rs.1800</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Sprayer', 1800)">Add to Cart</a>
+              </div>						
+            </div>                     
+          </div>
+          <!-- /card 2 -->
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/hoe.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">Hoe</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                 </div>
+                <p class="item-price"><strike>Rs.1700/kg</strike> <b>Rs.1500/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Hoe', 1500)">Add to Cart</a>
+              </div>						
+            </div>              
+          </div>
+          <!-- /card3 -->
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img src="images/shovel.jpg" class="img-responsive img-fluid" alt="">									
+              </div>
+              <div class="thumb-content">
+                <h4 class="h4-responsive">Shovel</h4>									
+                <div class="star-rating">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                  </ul>
+                </div>
+                <p class="item-price"><strike>Rs.1300/kg</strike> <b>Rs.1000/kg</b></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Shovel', 1000)">Add to Cart</a>
+
+              </div>						
+            </div>            
+          </div>
+          <!-- /card 4-->
+        </div>
+      </div>
+    </div>
+  </div>                
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2024 Farm Store. All Rights Reserved.</p>
+</footer>
+                    
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/payment.js"></script>
+
+</body>
+</html>

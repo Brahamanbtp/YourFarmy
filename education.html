@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Farming Guides - Farmers' Hub</title>
+  <style>
+    /* Existing styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    p {
+      color: #777;
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    img.img-fluid {
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    .feedback-form {
+      margin-top: 40px;
+    }
+    /* Advanced styles */
+    .search-bar {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .search-bar input[type="text"] {
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      width: 70%;
+      margin-right: 10px;
+    }
+    .search-bar button {
+      padding: 12px 25px;
+      border-radius: 25px;
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .search-bar button:hover {
+      background-color: #1a242f;
+    }
+    .social-links {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .social-links a {
+      margin: 0 15px;
+      color: #2c3e50;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #1a242f;
+    }
+    section {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+    section h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    section ul {
+      list-style-type: none;
+    }
+    section li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section li a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    section li a:hover {
+      color: #2980b9;
+    }
+    .feedback-form form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .feedback-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    .feedback-form input[type="text"],
+    .feedback-form textarea {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .feedback-form button {
+      padding: 12px 25px;
+      border-radius: 25px;
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    .feedback-form button:hover {
+      background-color: #1a242f;
+    }
+    #contact {
+      margin-top: 50px;
+      border-top: 2px solid #ddd;
+      padding-top: 30px;
+    }
+    #contact p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="factory-heading h1-responsive text-center shadow py-3 mt-2">Farming Guides</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search topics...">
+        <button type="button" onclick="searchTopics()">Search</button>
+      </div>
+
+  <!-- Social Media Links -->
+  <div class="social-links">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+  </div>
+
+  <<!-- Webinars & Workshops Section -->
+<section id="webinars-workshops">
+  <h2>Webinars & Workshops</h2>
+  <ul>
+    <li><a href="#">Introduction to Sustainable Farming</a> - <a href="#">Learn More</a></li>
+    <li><a href="#">Advanced Crop Management Techniques</a> - <a href="#">Learn More</a></li>
+    <li><a href="#">Soil Health and Nutrient Management</a> - <a href="#">Learn More</a></li>
+    <li><a href="#">Water Conservation in Agriculture</a> - <a href="#">Learn More</a></li>
+  </ul>
+</section>
+  <!-- Video Tutorials Section -->
+  <section id="video-tutorials">
+    <h2>Video Tutorials</h2>
+    <ul>
+      <li><a href="#">Basic Seed Sowing Techniques</a> - <a href="#">Watch Now</a></li>
+      <li><a href="#">Organic Pest Control Methods</a> - <a href="#">Watch Now</a></li>
+      <li><a href="#">Harvesting and Post-Harvest Care</a> - <a href="#">Watch Now</a></li>
+      <li><a href="#">Introduction to Greenhouse Farming</a> - <a href="#">Watch Now</a></li>
+    </ul>
+  </section>
+
+  <!-- Articles & Blogs Section -->
+  <section id="articles-blogs">
+    <h2>Articles & Blogs</h2>
+    <ul>
+      <li><a href="#">Top 10 Tips for Beginner Farmers</a> - <a href="#">Read More</a></li>
+      <li><a href="#">Understanding Soil pH and its Importance</a> - <a href="#">Read More</a></li>
+      <li><a href="#">Benefits of Organic Farming</a> - <a href="#">Read More</a></li>
+      <li><a href="#">Market Analysis for Agricultural Products</a> - <a href="#">Read More</a></li>
+    </ul>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="#">Weather Forecast</a> - <a href="#">Check Now</a></li>
+      <li><a href="#">Crop Rotation & Pest Control</a> - <a href="#">Learn More</a></li>
+    </ul>
+  </section>
+  <!-- Online Courses Section -->
+<section id="online-courses">
+  <h2>Online Courses</h2>
+  <ul>
+    <li><a href="#">Fundamentals of Organic Farming</a> - <a href="#">Enroll Now</a></li>
+    <li><a href="#">Agri-business Management</a> - <a href="#">Enroll Now</a></li>
+    <li><a href="#">Advanced Irrigation Techniques</a> - <a href="#">Enroll Now</a></li>
+  </ul>
+</section>
+
+<!-- Expert Talks Section -->
+<section id="expert-talks">
+  <h2>Expert Talks</h2>
+  <ul>
+    <li><a href="#">Interview with Dr. Jane Doe on Sustainable Farming</a> - <a href="#">Watch Now</a></li>
+    <li><a href="#">Discussion with John Smith on Soil Health</a> - <a href="#">Watch Now</a></li>
+    <li><a href="#">Panel Discussion: Future of Agriculture</a> - <a href="#">Watch Now</a></li>
+  </ul>
+</section>
+
+<!-- Research Papers Section -->
+<section id="research-papers">
+  <h2>Research Papers</h2>
+  <ul>
+    <li><a href="#">Impact of Climate Change on Agriculture</a> - <a href="#">Read Paper</a></li>
+    <li><a href="#">Soil Microbiology and Crop Yield</a> - <a href="#">Read Paper</a></li>
+    <li><a href="#">Genetically Modified Crops: Pros and Cons</a> - <a href="#">Read Paper</a></li>
+  </ul>
+</section>
+
+<!-- Farming Simulations Section -->
+<section id="farming-simulations">
+  <h2>Farming Simulations</h2>
+  <ul>
+    <li><a href="#">Virtual Farming: A Simulator Experience</a> - <a href="#">Try Now</a></li>
+    <li><a href="#">Crop Rotation Simulator</a> - <a href="#">Try Now</a></li>
+    <li><a href="#">Water Management Simulator</a> - <a href="#">Try Now</a></li>
+  </ul>
+</section>
+
+<!-- Case Studies Section -->
+<section id="case-studies">
+  <h2>Case Studies</h2>
+  <ul>
+    <li><a href="#">Success Story: Organic Farming in California</a> - <a href="#">Read Case Study</a></li>
+    <li><a href="#">Challenges in Small-scale Farming</a> - <a href="#">Read Case Study</a></li>
+    <li><a href="#">Innovative Farming Practices in India</a> - <a href="#">Read Case Study</a></li>
+  </ul>
+</section>
+
+  <!-- Feedback Form -->
+  <section class="feedback-form">
+    <h2>Feedback Form</h2>
+    <form action="/submit-feedback" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+      </div>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@farmershub.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+  </section>
+  
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA==" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script>
+    function searchTopics() {
+      let input = document.getElementById("searchInput");
+      let filter = input.value.toLowerCase();
+      let sections = document.querySelectorAll("section");
+  
+      sections.forEach(section => {
+        let ul = section.querySelector("ul");
+        let li = ul.querySelectorAll("li");
+  
+        li.forEach(item => {
+          let a = item.querySelector("a");
+          if (a.innerHTML.toLowerCase().includes(filter)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

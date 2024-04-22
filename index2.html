@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourFarmy</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ekko Lightbox CSS -->
+    <link href="css/ekko-lightbox.css">
+    <!-- Weather App Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .bg-img {
+            background-image: url('images/farmimage.jpg');
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-page-content {
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .home-page-text {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .home-supporting-text {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .homepage-btn-1 {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .homepage-btn-1:hover {
+            background-color: #45a049;
+        }
+
+        /* Weather App */
+        .weather-container {
+            position: fixed;
+            top: 50%;
+            right: 0.1%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px 0 0 15px;
+            padding: 20px;
+            box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.2);
+            width: 250px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .search input[type="text"] {
+            padding: 12px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex: 1;
+            margin-right: 15px;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .search button {
+            padding: 12px 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: -30px;
+            z-index: 1;
+            position: absolute;
+            right: 10px;
+        }
+
+        .search button:hover {
+            background-color: #45a049;
+        }
+
+        .weather {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .weather-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .temp {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .city {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .col img {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 8px;
+        }
+
+        .col p {
+            margin: 8px 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/farmylogo.jpg" alt="Logo">
+                YourFarmy
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="firstpage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="farmingpractices.html">Farming Practices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CropPricing.html">Crop Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Loan.html">Farmer Loan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>  
+    <!-- /Navbar -->
+
+    <!-- Main content -->
+    <div class="bg-img">
+        <div class="overlay">
+            <div class="home-page-content">
+                <h1 class="home-page-text">ROOT OF THE NATION</h1>
+                <h5 class="home-supporting-text">Growing greatness from the ground up.</h5>
+                <a href="services.html" class="homepage-btn-1">Get Our Services</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Main content -->
+
+    <!-- Weather Info -->
+    <div class="weather-container">
+        <div class="weather-float">
+            <div class="search">
+                <input type="text" placeholder="Enter City Name" spellcheck="false">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="weather">
+                <img src="images/rain.png" class="weather-icon">
+                <h1 class="temp">22 °C</h1>
+                <h2 class="city">New York</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png">
+                        <p class="humidity">57.5%</p>
+                    </div>
+                    <div class="col">
+                        <img src="images/wind.png">
+                        <p class="wind">15 km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Weather Info -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="indexweather.js"></script>
+</body>
+
+</html>

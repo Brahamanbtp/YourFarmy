@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLogo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lobster&family=Montserrat:wght@1,500;600;700&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General styles */
+        .card {
+            width: 340px;
+            height: 400px;
+            margin-bottom: 2rem;
+        }
+
+        .card-body .card-title {
+            font-size: 2.4rem;
+            font-family: 'Raleway', sans-serif;
+            color: #4d4d4d;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .card-body form label {
+            font-size: .9rem;
+            font-family: 'Raleway', sans-serif;
+            color: #4d4d4d;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .card-body form input,
+        textarea {
+            width: 280px;
+            background-color: #f2f2ff2;
+        }
+
+        .submit-btn {
+            color: white;
+            background: green;
+        }
+
+        .opening-hours h3,
+        .opening-hours h6 {
+            font-size: 2rem;
+            font-family: 'Raleway', sans-serif;
+            color: #4d4d4d;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .footer-socials {
+            background-color: #004d4d;
+        }
+
+        .footer-copyright {
+            background-color: #003333;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 576px) {
+            .card {
+                width: 320px;
+                height: 390px;
+            }
+
+            .card-body form input,
+            textarea {
+                width: 210px;
+            }
+
+            .opening-hours h3,
+            .opening-hours h6 {
+                font-size: 1.2rem;
+            }
+
+            hr {
+                width: 100px;
+                text-align: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">YourLogo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Content -->
+    <div class="container py-5">
+        <h1 class="h1-responsive text-center mb-5">Need help?</h1>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>How can we help?</h4>
+                        </div>
+                        <form class="comment-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="textarea">Query or suggestion</label>
+                                <textarea class="form-control" id="textarea" rows="3" placeholder="Talk to us here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-block submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Opening Hours and Contact Info -->
+            <div class="col-md-6">
+                <div class="opening-hours">
+                    <h3>Get in touch with us</h3>
+                    <hr>
+                    <h6><i class="fa fa-envelope"></i> YourFarmy1435@gmail.com</h6>
+                    <h6><i class="fa fa-phone"></i> +91 985673524</h6>
+                </div>
+                <!-- Social icons -->
+                <div class="social text-center mt-4">
+                    <a href="#" class="text-black mr-2"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-black mr-2"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-black mr-2"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="index.html" class="text-black"><i class="fa fa-home fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>YourLogo</h5>
+                    <p>We are here to help. Contact us for any inquiries.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./services.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><i class="fa fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-white"><i class="fa fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-white"><i class="fa fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            <p>&copy; 2024 YourFarmy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contact form here (same as your existing form) -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Additional script for modal -->
+    <script>
+        $('#contactModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var recipient = button.data('whatever');
+            var modal = $(this);
+            modal.find('.modal-title').text('New message to ' + recipient);
+            modal.find('.modal-body input').val(recipient);
+        });
+    </script>
+</body>
+
+</html>
